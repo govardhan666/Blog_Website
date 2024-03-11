@@ -6,7 +6,7 @@ const methodOverride = require('method-override')
 const app = express()
 
 mongoose.connect('mongodb://localhost/bharatInternDatabase')
-.set("views", "./view");
+app.set("views", "./view")
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({extended: false}))
 app.use(methodOverride('_method'))
